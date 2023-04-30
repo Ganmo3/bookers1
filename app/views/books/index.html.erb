@@ -3,9 +3,15 @@
 <% @books.each do |book| %>
 
 <p>Title</p>
-<span><%= book.title %></span>
+<%= link_to book.title, "/books/#{book.id}" %>
 
 <p>Body</p>
 <span><%= book.body %></span>
+
+<p>Show</p>
+
+<p>Edit</p>
+
+<p>Destroy</p>
 
 <% end %>

@@ -3,15 +3,28 @@
 <% @books.each do |book| %>
 
 <p>Title</p>
-<%= link_to book.title, "/books/#{book.id}" %>
 
 <p>Body</p>
 <span><%= book.body %></span>
 
-<p>Show</p>
+<%= link_to "Show", "/books/#{book.id}" %>
 
-<p>Edit</p>
+<!--以下があるとエラーなければ大丈夫）
+<%= link_to "edit", edit_book_path(@book.id) %>
+
 
 <p>Destroy</p>
 
+<% end %>
+
+<h2>New book</h2>
+
+<%= form_with model: @book, url: '/books', method: :post do |f| %>
+  <h4>Title</h4>
+  <%= f.text_field :title %>
+
+  <h4>Body</h4>
+  <%= f.text_area :body %>
+
+  <%= f.submit 'Create Book' %>
 <% end %>

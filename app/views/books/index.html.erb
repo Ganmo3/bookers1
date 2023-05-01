@@ -8,12 +8,8 @@
 <span><%= book.body %></span>
 
 <%= link_to "Show", "/books/#{book.id}" %>
-
-<!--以下があるとエラーなければ大丈夫）
-<%= link_to "edit", edit_book_path(@book.id) %>
-
-
-<p>Destroy</p>
+<%= link_to "Edit", edit_book_path(book.id) %>
+<%= link_to "Destroy", destroy_book_path(book.id), method: :delete, "data-confirm" => "Are you sure?" %>
 
 <% end %>
 

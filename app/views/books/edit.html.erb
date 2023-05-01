@@ -9,10 +9,10 @@
 
   <%= f.submit 'Update Book' %>
 
-  <p>Show</p>
-  <!-- 編集中 -->
-
-  <P>Back</P>
-  <!-- 編集中 -->
+  <%= link_to "Show", "/books/#{@book.id}" %>
+  <p>|</p>
+  <%= link_to "Edit", edit_book_path(@book.id) %>
+  <p>|</p>
+  <%= link_to "Back", books_path %>
 
   <% end %>

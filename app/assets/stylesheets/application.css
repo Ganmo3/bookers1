@@ -41,7 +41,7 @@ body {
  }
 
 /* all */
-  /* olがないとmarginが機能しない、なぜ？ */
+  /* olを入れるとmarginが機能 */
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
@@ -106,7 +106,6 @@ td {
 }
 
  /* 投稿機能タイトル */
-  /*エラーのときだけ赤くしたい */
 .field_with_errors {
   padding: 2px;
   background-color: red;
